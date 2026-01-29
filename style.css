@@ -1,6 +1,13 @@
 /* style.css */
 
 /* Global */
+
+html, body {
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -64,42 +71,64 @@ nav ul {
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('https://via.placeholder.com/1600x500') center/cover no-repeat;
-    height: 500px;
+    background-image: url("../accueil/quentin.jpeg"); /* ajuste le chemin si besoin */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 80vh;
+    min-height: 70vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     color: #fff;
     text-align: center;
 }
 
-    .hero h1 {
-        font-family: 'Playball', cursive;
-        font-size: 4rem;
-        margin-bottom: 20px;
-        text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-    }
+/* Voile sombre pour lisibilité */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
 
-    .hero p {
-        font-size: 1.5rem;
-        margin-bottom: 30px;
-        text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-    }
+/* Assure que le texte passe au-dessus du voile */
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
 
-    .hero .button {
-        background: #2e9d41;
-        padding: 15px 30px;
-        font-size: 1.2rem;
-        border-radius: 25px;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
+.hero h1 {
+    font-family: 'Playball', cursive;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
 
-        .hero .button:hover {
-            background: #257e34;
-        }
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.hero .button {
+    background: #2e9d41;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero .button:hover {
+    background: #257e34;
+}
+
 
 /* Sections */
 section {
@@ -189,14 +218,6 @@ footer {
     }
 }
 
-.map-container {
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
 
 /* Formulaire */
 form {
@@ -238,17 +259,11 @@ textarea {
     transform: scale(1.05);
 }
 
-/* Top anchor */
-#top {
-    position: absolute;
-    top: 0;
-}
-
 /* Sections de services divisées */
 .service-section {
     padding: 80px 5%;
     text-align: center;
-    min-height: 500px; /* Pour un scroll visible et fluide */
+    min-height: auto; /* Pour un scroll visible et fluide */
     display: flex;
     justify-content: center;
     align-items: center;
