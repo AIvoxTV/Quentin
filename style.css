@@ -197,3 +197,121 @@ footer {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
+/* Formulaire */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* Galerie */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Top anchor */
+#top {
+    position: absolute;
+    top: 0;
+}
+
+/* Sections de services divisées */
+.service-section {
+    padding: 80px 5%;
+    text-align: center;
+    min-height: 500px; /* Pour un scroll visible et fluide */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Texte blanc pour contraste sur backgrounds colorés */
+    background-size: cover; /* Prêt pour des images de background si tu en ajoutes */
+    background-position: center;
+}
+
+.service-content {
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5); /* Overlay sombre pour lisibilité du texte */
+    border-radius: 10px;
+}
+
+.service-section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service-section p {
+    font-size: 1.2rem;
+}
+
+/* Thèmes différents */
+.theme-interieure {
+    background-color: #f5e6d3; /* Beige clair pour thème bois/intérieur */
+    color: #4c3831; /* Marron pour texte */
+}
+
+.theme-interieure .service-content {
+    background: rgba(76, 56, 49, 0.7); /* Overlay marron */
+    color: #fff;
+}
+
+.theme-exterieure {
+    background-color: #d9e8d6; /* Vert pâle pour extérieur */
+    color: #257e34; /* Vert foncé pour texte */
+}
+
+.theme-exterieure .service-content {
+    background: rgba(37, 126, 52, 0.7); /* Overlay vert */
+    color: #fff;
+}
+
+.theme-jardin {
+    background-color: #e0f7e9; /* Vert clair pour jardin */
+    color: #2e9d41; /* Vert principal pour texte */
+}
+
+.theme-jardin .service-content {
+    background: rgba(46, 157, 65, 0.7); /* Overlay vert frais */
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-section {
+        min-height: 400px;
+        padding: 60px 5%;
+    }
+
+    .service-content {
+        padding: 30px;
+    }
+}
