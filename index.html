@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artisan menuisier à Saint-Pol-de-Léon : menuiserie intérieure, extérieure et aménagement de jardin en Bretagne nord.">
+    <meta name="keywords" content="menuiserie, jardin, terrasses, clôtures, Saint-Pol-de-Léon, Bretagne">
+    <title>Menuiserie & Jardin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Serif:wght@400;800&family=Playball&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Ajoute un favicon si tu en as un -->
+    <!-- CDN pour AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body id="top">
+    <header>
+        <div class="logo"><a href="index.html"><img src="Logo.jpg" alt="Logo Menuiserie & Jardin"></a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Menuiserie & Jardin</h1>
+        <p>Aménagement intérieur et extérieur à Saint-Pol-de-Léon. Transformez votre espace avec nos solutions sur mesure en bois et verdure.</p>
+        <button class="button" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'});">Découvrir nos services</button>
+    </section>
+
+    <section id="services">
+        <h2>Nos Services</h2>
+        <p>Découvrez nos expertises en scrollant ci-dessous. Chaque service est adapté à vos besoins avec des matériaux de qualité, pour un résultat durable et esthétique.</p>
+    </section>
+
+    <section id="service-interieure" class="service-section">
+        <div class="service-content-flex">
+            <div class="service-text" data-aos="fade-up" data-aos-duration="1000">
+                <h3>Menuiserie intérieure</h3>
+                <p>Portes, escaliers, placards et mobilier sur mesure. Nous créons des espaces intérieurs chaleureux et fonctionnels, adaptés à votre style de vie.</p>
+                <button class="button" onclick="location.href='contact.html';">En savoir plus</button>
+            </div>
+            <div class="service-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <img src="https://www.caseo-maison.com/5322-pdt_detail_desktop/amenagement-sous-escalier-sur-mesure.jpg" alt="Exemple de menuiserie intérieure : placard sous escalier">
+            </div>
+        </div>
+    </section>
+
+    <section id="service-exterieure" class="service-section">
+        <div class="service-content-flex">
+            <div class="service-text" data-aos="fade-up" data-aos-duration="1000">
+                <h3>Menuiserie extérieure</h3>
+                <p>Terrasses, pergolas, abris et clôtures. Des structures robustes pour embellir et protéger votre extérieur, en harmonie avec la nature.</p>
+                <button class="button" onclick="location.href='contact.html';">En savoir plus</button>
+            </div>
+            <div class="service-image" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                <img src="https://cdn.chausson.fr/images/offers/2023/04/pergola/illustration1.jpg" alt="Exemple de menuiserie extérieure : pergola et terrasse en bois">
+            </div>
+        </div>
+    </section>
+
+    <section id="service-jardin" class="service-section">
+        <div class="service-content-flex">
+            <div class="service-text" data-aos="fade-up" data-aos-duration="1000">
+                <h3>Jardin & aménagement</h3>
+                <p>Entretien, plantations et aménagement paysager. Transformez votre jardin en un oasis de verdure, avec des designs personnalisés.</p>
+                <button class="button" onclick="location.href='contact.html';">En savoir plus</button>
+            </div>
+            <div class="service-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <img src="https://saint-germain-paysage.com/wp-content/uploads/2021/03/Jardin-particulier-1200x675.jpg" alt="Exemple d'aménagement de jardin : plantations et massif fleuri">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Menuiserie & Jardin. Tous droits réservés.</p>
+        <p><a href="#top">Retour en haut</a></p>
+    </footer>
+
+    <!-- Script pour initialiser AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false
+        });
+    </script>
+</body>
+</html>
