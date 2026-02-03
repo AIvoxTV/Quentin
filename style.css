@@ -70,11 +70,11 @@ nav ul li a:hover {
 /* Hero Section (fusionnée et corrigée) */
 .hero {
     position: relative;
-    background-image: url("../accueil/back.jpeg"); /* Chemin personnalisé – ajuste si besoin */
+    background-image: url("accueil/back.jpeg"); /* Chemin personnalisé – ajuste si besoin */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 60vh;
+    height: 30vh;
     min-height: 400px; /* Minimum raisonnable */
     display: flex;
     flex-direction: column;
@@ -88,7 +88,7 @@ nav ul li a:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* Overlay pour lisibilité */
+    background: rgba(0, 0, 0, 0.2); /* Overlay pour lisibilité */
 }
 
 .hero > * {
