@@ -372,3 +372,72 @@ textarea {
         margin-bottom: 20px;
     }
 }
+
+/* Équipe - photos plus grandes, disposition horizontale */
+.team-photos {
+    display: flex;
+    justify-content: center; /* centre l’ensemble */
+    align-items: flex-start;
+    gap: 40px; /* espace entre Quentin et Thomas */
+    flex-wrap: wrap; /* pour mobile, permet de passer à la ligne */
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1; /* chaque membre prend la moitié de l'espace disponible */
+    min-width: 250px; /* pour éviter que ça devienne trop petit */
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* léger effet au survol */
+}
+
+.member-image img {
+    width: 120px;       /* taille du cercle plus grande */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2e9d41; /* contour vert pour effet */
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-info h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.member-info blockquote {
+    margin: 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 767px) {
+    .team-photos {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .team-member {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .member-image img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
