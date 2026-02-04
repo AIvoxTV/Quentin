@@ -70,31 +70,48 @@ nav ul li a:hover {
 /* Hero Section (fusionnée et corrigée) */
 .hero {
     position: relative;
-    background-image: url("accueil/back.jpeg"); /* Chemin personnalisé – ajuste si besoin */
+    background-image: url("accueil/bois.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 30vh; /* Ajusté pour cohérence, mais vérifie si ce n'est pas trop petit */
-    min-height: 400px; /* Minimum raisonnable pour éviter que le contenu déborde */
+    height: 30vh;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
     text-align: center;
+    overflow: hidden;
 }
 
+/* Verdure */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.2); /* Overlay pour lisibilité */
+    background-image: url("accueil/verdure.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Overlay sombre */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 2;
 }
 
 .hero > * {
     position: relative;
-    z-index: 1;
+    z-index: 3;
 }
+
 
 .hero h1 {
     font-family: 'Playball', cursive;
@@ -128,9 +145,6 @@ section {
     padding: 80px 5%;
 }
 
-section:nth-child(even) {
-    background: #e9ecef;
-}
 
 section h2 {
     font-family: 'Noto Serif', serif;
