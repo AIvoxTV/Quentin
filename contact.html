@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Serif:wght@400;800&family=Playball&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- CDN pour AOS (Animate On Scroll) pour animations modernes -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
@@ -22,24 +24,39 @@
         </nav>
     </header>
 
-    <section>
-        <h2>Contactez-nous</h2>
-        <p>Email : contact@menuiseriejardin.fr</p>
-        <p>Téléphone : 01 23 45 67 89</p>
-        <form action="mailto:contact@menuiseriejardin.fr" method="post" enctype="text/plain">
-            <label for="name">Nom :</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email :</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="message">Message :</label><br>
-            <textarea id="message" name="message" required></textarea><br>
-            <button type="submit">Envoyer un message</button>
-        </form>
+    <section class="contact-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2 data-aos="fade-down" data-aos-duration="1000">Contactez-nous</h2>
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                <p><strong>Email :</strong> contact@menuiseriejardin.fr</p>
+                <p><strong>Responsable menuiserie :</strong> Quentin Guennou</p>
+                <p><strong>Téléphone :</strong> 06 51 93 99 59</p>
+                <p><strong>Responsable jardin :</strong> Thomas Cloarec</p>
+                <p><strong>Téléphone :</strong> 07 83 29 01 38</p>
+            </div>
+            <form class="contact-form" action="mailto:contact@menuiseriejardin.fr" method="post" enctype="text/plain" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Envoyer un message</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2023 Menuiserie & Jardin. Tous droits réservés.</p>
+        <p>&copy; 2026 Menuiserie & Jardin. Tous droits réservés.</p>
         <p><a href="index.html">Retour à l'accueil</a></p>
     </footer>
+
+    <!-- Script pour initialiser AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false
+        });
+    </script>
 </body>
 </html>

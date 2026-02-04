@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Serif:wght@400;800&family=Playball&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- CDN pour AOS (Animate On Scroll) pour un design moderne avec animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
@@ -22,49 +24,61 @@
         </nav>
     </header>
 
-    <section>
-        <h2>Terrasses</h2>
+    <section class="realisation-section" id="terrasses" data-aos="fade-up" data-aos-duration="1000">
+        <h2 data-aos="fade-down" data-aos-duration="1000">Terrasses</h2>
         <p>Nous concevons et réalisons des terrasses sur mesure, en bois ou composite, adaptées à votre jardin et vos envies.</p>
-        <div class="gallery-grid">
-            <img src="terrasses/terrasses2.jpeg" alt="Terrasse en bois">
-            <img src="terrasses/terrasses4.jpeg" alt="Terrasse composite">
-			<img src="terrasses/terrasses3.jpeg" alt="Terrasse composite">
-			<img src="terrasses/terrasses1.jpeg" alt="Terrasse composite">
+        <div class="gallery-grid framed-gallery">
+            <img src="terrasses/terrasses2.jpeg" alt="Terrasse en bois" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+            <img src="terrasses/terrasses4.jpeg" alt="Terrasse composite" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+            <img src="terrasses/terrasses3.jpeg" alt="Terrasse composite" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+            <img src="terrasses/terrasses1.jpeg" alt="Terrasse composite" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
         </div>
     </section>
 
-    <section>
-        <h2>Menuiserie intérieure</h2>
+    <section class="realisation-section" id="interieure" data-aos="fade-up" data-aos-duration="1000">
+        <h2 data-aos="fade-down" data-aos-duration="1000">Menuiserie intérieure</h2>
         <p>Installation de fenêtres et portes, ainsi que pose de parquet flottant ou collé, avec finition soignée.</p>
-        <div class="gallery-grid">
-            <img src="intérieure/intérieure2.jpeg" alt="Porte intérieure">
-            <img src="intérieure/intérieure1.jpeg" alt="Parquet">
+        <div class="gallery-grid framed-gallery">
+            <img src="intérieure/intérieure6.jpeg" alt="cuisine" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+            <img src="intérieure/intérieure8.jpeg" alt="meuble salle de bain" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+            <img src="intérieure/intérieure5.jpeg" alt="parquet" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+            <img src="intérieure/intérieure7.jpeg" alt="parquet2" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
         </div>
     </section>
 
-    <section>
-        <h2>Menuiserie extérieure</h2>
+    <section class="realisation-section" id="exterieure" data-aos="fade-up" data-aos-duration="1000">
+        <h2 data-aos="fade-down" data-aos-duration="1000">Menuiserie extérieure</h2>
         <p>Nous fabriquons et installons pergolas, abris, clôtures et autres structures extérieures.</p>
-        <div class="gallery-grid">
-            <img src="extérieure/extérieur1.jpeg" alt="Pergola">
-            <img src="extérieure/extérieur2.jpeg" alt="Abris">
-			<img src="extérieure/extérieur3.jpeg" alt="Abris2">
-			<img src="extérieure/extérieur8.jpeg" alt="Couvreur">
+        <div class="gallery-grid framed-gallery">
+            <img src="extérieure/extérieur1.jpeg" alt="Pergola" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+            <img src="extérieure/extérieur2.jpeg" alt="Abris" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+            <img src="extérieure/extérieur3.jpeg" alt="Abris2" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+            <img src="extérieure/extérieur8.jpeg" alt="Couvreur" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
         </div>
     </section>
-	
-	<section>
-        <h2>Jardin</h2>
-        <p>Traitement jardin</p>
-        <div class="gallery-grid">
-            <img src="jardin/jardinaprès.jpeg" alt="jardin">
-            <img src="jardin/jardin2après.jpeg" alt="jardin2">
+    
+    <section class="realisation-section" id="jardin" data-aos="fade-up" data-aos-duration="1000">
+        <h2 data-aos="fade-down" data-aos-duration="1000">Jardin</h2>
+        <p>Tonte de pelouse, taille de haie, plantations et aménagement paysager.</p>
+        <div class="gallery-grid framed-gallery">
+            <img src="jardin/jardinaprès.jpeg" alt="jardin" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+            <img src="jardin/jardin2après.jpeg" alt="jardin2" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+            <img src="jardin/jardin.jpeg" alt="jardin3" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+            <img src="jardin/jardin3après.jpeg" alt="jardin4" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2023 Menuiserie & Jardin. Tous droits réservés.</p>
+        <p>&copy; 2026 Menuiserie & Jardin. Tous droits réservés.</p>
         <p><a href="index.html">Retour à l'accueil</a></p>
     </footer>
+
+    <!-- Script pour initialiser AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false
+        });
+    </script>
 </body>
 </html>
