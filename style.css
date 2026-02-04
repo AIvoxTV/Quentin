@@ -60,11 +60,21 @@ nav ul {
 nav ul li a {
     color: #2e9d41;
     font-weight: 600;
-    transition: color 0.3s;
+    padding: 8px 20px;              /* espace autour du texte */
+    border: 2px solid #2e9d41;      /* contour initial */
+    border-radius: 25px;             /* coins arrondis */
+    transition: all 0.3s ease;       /* transition douce */
+    display: inline-block;           /* pour que padding et border fonctionnent */
+    position: relative;              /* pour pseudo-élément si nécessaire */
+    text-align: center;
+    background-color: transparent;   /* fond transparent par défaut */
 }
 
 nav ul li a:hover {
-    color: #257e34;
+    color: #fff;                     /* texte clair au survol */
+    background-color: #257e34;       /* fond vert */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* ombre légère */
+    border-color: #257e34;           /* contour assorti au fond */
 }
 
 /* Hero Section (fusionnée et corrigée) */
