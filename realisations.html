@@ -23,8 +23,31 @@
             </ul>
         </nav>
     </header>
+	
+	
+	<section class="categories">
+    <div class="category-card" data-target="terrasses">
+        <h3>Terrasses</h3>
+        <img src="terrasses/terrasses2.jpeg" alt="Terrasses">
+    </div>
+    <div class="category-card" data-target="interieure">
+        <h3>Menuiserie intérieure</h3>
+        <img src="intérieure/intérieure6.jpeg" alt="Intérieur">
+    </div>
+    <div class="category-card" data-target="exterieure">
+        <h3>Menuiserie extérieure</h3>
+        <img src="extérieure/extérieur1.jpeg" alt="Extérieur">
+    </div>
+    <div class="category-card" data-target="jardin">
+        <h3>Jardin</h3>
+        <img src="jardin/jardin.jpeg" alt="Jardin">
+    </div>
+	</section>
+
+	
 
     <section class="realisation-section" id="terrasses" data-aos="fade-up" data-aos-duration="1000">
+		<div class="content-wrapper">
         <h2 data-aos="fade-down" data-aos-duration="1000">Terrasses</h2>
         <p>Nous concevons et réalisons des terrasses sur mesure, en bois ou composite, adaptées à votre jardin et vos envies.</p>
         <div class="gallery-grid framed-gallery">
@@ -36,6 +59,7 @@
     </section>
 
     <section class="realisation-section" id="interieure" data-aos="fade-up" data-aos-duration="1000">
+		<div class="content-wrapper">
         <h2 data-aos="fade-down" data-aos-duration="1000">Menuiserie intérieure</h2>
         <p>Installation de fenêtres et portes, ainsi que pose de parquet flottant ou collé, avec finition soignée.</p>
         <div class="gallery-grid framed-gallery">
@@ -47,6 +71,7 @@
     </section>
 
     <section class="realisation-section" id="exterieure" data-aos="fade-up" data-aos-duration="1000">
+		<div class="content-wrapper">
         <h2 data-aos="fade-down" data-aos-duration="1000">Menuiserie extérieure</h2>
         <p>Nous fabriquons et installons pergolas, abris, clôtures et autres structures extérieures.</p>
         <div class="gallery-grid framed-gallery">
@@ -58,6 +83,7 @@
     </section>
     
     <section class="realisation-section" id="jardin" data-aos="fade-up" data-aos-duration="1000">
+		<div class="content-wrapper">
         <h2 data-aos="fade-down" data-aos-duration="1000">Jardin</h2>
         <p>Tonte de pelouse, taille de haie, plantations et aménagement paysager.</p>
         <div class="gallery-grid framed-gallery">
@@ -72,13 +98,63 @@
         <p>&copy; 2026 Menuiserie & Jardin. Tous droits réservés.</p>
         <p><a href="index.html">Retour à l'accueil</a></p>
     </footer>
+	
+<div class="lightbox-overlay" id="lightbox">
+    <img src="" alt="Agrandie">
+</div>
 
     <!-- Script pour initialiser AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: false
+window.addEventListener('DOMContentLoaded', () => {
+    // Initialiser AOS
+    AOS.init({ once: false });
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const galleryImages = document.querySelectorAll('.framed-gallery img');
+
+    galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;  
+            lightbox.style.display = 'flex'; 
         });
-    </script>
+    });
+
+    lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    // Catégories
+    const categoryCards = document.querySelectorAll('.category-card');
+    const allSections = document.querySelectorAll('.realisation-section');
+
+    // Cacher toutes les sections au départ
+    allSections.forEach(sec => sec.style.display = 'none');
+
+    // Afficher la section si hash dans l'URL
+    const hash = window.location.hash;
+    if (hash) {
+        const target = document.querySelector(hash);
+        if (target) {
+            target.style.display = 'block';
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Clic sur carte catégorie
+    categoryCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const targetId = card.dataset.target;
+            allSections.forEach(sec => {
+                sec.style.display = (sec.id === targetId) ? 'block' : 'none';
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+});
+
+   </script>
 </body>
 </html>
